@@ -1,17 +1,26 @@
 var tamanho = 8;
+var linhas = 8;
 var tabuleiro = '';
-var j = 1;
-for (var i = 1; i < 100; i++) {
-	if (i % 2 === 0 ) {
-		tabuleiro += '#';
-	} else {
-		tabuleiro += ' ';
+var odd = true;
+
+for (var i = 0; i < tamanho; i++) {
+	for (var j = 0; j < linhas; j++) {
+		if (j % 2 === 0) {
+			if (odd) {
+				tabuleiro += '#';	
+			} else {
+				tabuleiro += ' ';
+			}
+		} else {
+			if (odd) {
+				tabuleiro += ' ';	
+			} else {
+				tabuleiro += '#';
+			}
+		}
 	}
-	if(i % tamanho === 0) {
-		tabuleiro += '\n';
-		i+=j;
-		j++;
-	}
+	tabuleiro += '\n';
+	odd = !odd;
 }
 console.log(tabuleiro);
 
