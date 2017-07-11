@@ -1,28 +1,28 @@
-var tamanho = 8;
-var linhas = 8;
-var tabuleiro = '';
+var columns = 8;
+var lines = 8;
+var board = '';
 var odd = true;
 
-for (var i = 0; i < tamanho; i++) {
-	for (var j = 0; j < linhas; j++) {
+for (var i = 0; i < columns; i++) {
+	for (var j = 0; j < lines; j++) {
 		if (j % 2 === 0) {
 			if (odd) {
-				tabuleiro += '#';	
+				board += '#';	
 			} else {
-				tabuleiro += ' ';
+				board += ' ';
 			}
 		} else {
 			if (odd) {
-				tabuleiro += ' ';	
+				board += ' ';	
 			} else {
-				tabuleiro += '#';
+				board += '#';
 			}
 		}
 	}
-	tabuleiro += '\n';
+	board += '\n';
 	odd = !odd;
 }
-console.log(tabuleiro);
+console.log(board);
 
 
 
