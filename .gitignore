@@ -1,0 +1,11 @@
+node_modules/
+screenshots/
+platforms/
+plugins/
+resources/
+screenshots/
+www/lib
+www/css
+www/bundles
+.DS_Store
+.vscode/
