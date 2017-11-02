@@ -1,13 +1,13 @@
-function countBs(word) {
+function countChar(word, char) {
 	
-	var bees = 0;
+	var chars = 0;
 
 	for (var i = word.length - 1; i >= 0; i--) {
-		if (word[i] === "B") {
-			bees++;
+		if (word[i] === char) {
+			chars++;
 		}
 	}
-	return bees;
+	return chars;
 }
 
-console.log(countBs("This Boat is Beautiful"));
+console.log(countChar("This Boat is Beautiful", "i"));
